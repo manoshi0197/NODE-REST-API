@@ -3,10 +3,10 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-// Example GET route
-// router.get('/', (req, res) => {
-//     res.send('Auth route is working');
-// });
+ //Example GET route
+       router.get('/', (req, res) => {
+       res.send('Auth route is working');
+});
 
 // REGISTER
 router.post("/register", async (req, res) => {
@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
         });
 
         //save user and return response
-        const user = await newUser.save();
+        const user = await newUser.save();//its writing into the database
         res.status(200).json(user);
     } catch (err) {
         console.log(err);
