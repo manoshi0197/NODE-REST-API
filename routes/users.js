@@ -3,9 +3,10 @@ const express = require('express');
 const router = express.Router();
 const bcrupt = require("bcrypt");
 //user get data, post and everything we do in this page
-// router.get("/",(req,res)=>{
-//     res.send("hey its user routes");
-// });
+router.get("/", (req, res) => {
+    res.send("hey its user routes");
+});
+
 
 //update user
  router.put("/:id", async(req,res)=>{
